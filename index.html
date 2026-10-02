@@ -3,291 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>FF ProZone | Free Fire Settings</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-    background:#080808;
-    color:white;
+  background:#080808;
+  color:#fff;
 }
 
-/* NAVBAR */
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#111;
-    border-bottom:1px solid #333;
-    padding:12px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#111;
+  border-bottom:1px solid #333;
+  padding:12px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo-box{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:bold;
+  color:#ff9d00;
 }
 
-.logo-box img{
-    width:115px;
-    height:auto;
-}
-
-.logo-text{
-    font-weight:bold;
-    color:#ff9d00;
-    font-size:18px;
+.logo img{
+  width:105px;
+  height:auto;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:22px;
+  display:flex;
+  gap:22px;
+  list-style:none;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 nav a:hover{
-    color:#ff9d00;
+  color:#ff9d00;
 }
 
-/* HERO */
 .hero{
-    min-height:88vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:30px 20px;
-
-    background:
-    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.9)),
-    radial-gradient(circle at center,#392000,#080808 65%);
-}
-
-.hero-content{
-    max-width:850px;
+  min-height:85vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px 20px;
+  background:
+  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.92)),
+  radial-gradient(circle,#4b2b00,#080808 65%);
 }
 
 .hero h1{
-    font-size:clamp(42px,8vw,82px);
-    text-transform:uppercase;
-    letter-spacing:3px;
+  font-size:clamp(45px,9vw,85px);
+  letter-spacing:3px;
 }
 
 .hero h1 span{
-    color:#ff9d00;
+  color:#ff9d00;
 }
 
 .hero p{
-    margin:20px auto;
-    color:#ccc;
-    font-size:18px;
-    max-width:650px;
-    line-height:1.6;
+  max-width:650px;
+  margin:20px auto;
+  color:#ccc;
+  line-height:1.7;
 }
 
 .btn{
-    display:inline-block;
-    background:#ff9d00;
-    color:#111;
-    padding:14px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin:8px;
-    transition:.3s;
+  border:0;
+  cursor:pointer;
+  display:inline-block;
+  padding:14px 25px;
+  margin:7px;
+  border-radius:8px;
+  background:#ff9d00;
+  color:#111;
+  font-weight:bold;
+  text-decoration:none;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    background:#ffb52e;
+  background:#ffb52e;
+  transform:translateY(-2px);
 }
 
-/* SECTIONS */
 section{
-    padding:70px 7%;
+  padding:70px 7%;
 }
 
 .title{
-    text-align:center;
-    margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .title h2{
-    font-size:38px;
+  font-size:36px;
 }
 
 .title span{
-    color:#ff9d00;
+  color:#ff9d00;
+}
+
+/* REGISTER */
+.auth-section{
+  background:#0d0d0d;
+}
+
+.auth-box{
+  max-width:500px;
+  margin:auto;
+  background:#151515;
+  border:1px solid #333;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 10px 40px #000;
+}
+
+.auth-box h2{
+  text-align:center;
+  color:#ff9d00;
+  margin-bottom:20px;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:14px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #333;
+  background:#0c0c0c;
+  color:#fff;
+  outline:none;
+}
+
+input:focus,select:focus,textarea:focus{
+  border-color:#ff9d00;
+}
+
+.small{
+  color:#999;
+  font-size:13px;
+  line-height:1.5;
+  margin:10px 0;
+}
+
+.checkbox{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:12px 0;
+  color:#bbb;
+  font-size:13px;
+}
+
+.checkbox input{
+  width:auto;
+  margin-top:3px;
 }
 
 /* CARDS */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
 .card{
-    background:#141414;
-    border:1px solid #292929;
-    border-radius:15px;
-    padding:25px;
-    transition:.3s;
+  background:#151515;
+  border:1px solid #292929;
+  border-radius:15px;
+  padding:25px;
+  transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#ff9d00;
+  transform:translateY(-5px);
+  border-color:#ff9d00;
 }
 
 .card h3{
-    color:#ff9d00;
-    margin-bottom:12px;
+  color:#ff9d00;
+  margin-bottom:12px;
 }
 
 .card p{
-    color:#bbb;
-    line-height:1.6;
+  color:#bbb;
+  line-height:1.6;
 }
 
 /* SETTINGS */
-.settings{
-    background:#0d0d0d;
+.setting{
+  background:#151515;
+  padding:22px;
+  border-radius:15px;
+  border:1px solid #292929;
+  margin-bottom:15px;
 }
 
-.setting-card{
-    background:#161616;
-    border:1px solid #292929;
-    border-radius:16px;
-    padding:25px;
-    margin-bottom:18px;
+.setting-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
 }
 
-.setting-head{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:12px;
-}
-
-.setting-head h3{
-    color:white;
+.setting-top strong{
+  color:#fff;
 }
 
 .value{
-    color:#ff9d00;
-    font-weight:bold;
+  color:#ff9d00;
+  font-weight:bold;
 }
 
 .bar{
-    height:12px;
-    background:#292929;
-    border-radius:20px;
-    overflow:hidden;
+  height:11px;
+  background:#292929;
+  border-radius:20px;
 }
 
 .fill{
-    height:100%;
-    background:linear-gradient(90deg,#ff6a00,#ffb300);
-    border-radius:20px;
+  height:100%;
+  background:#ff9d00;
+  border-radius:20px;
 }
 
 .note{
-    text-align:center;
-    color:#999;
-    margin-top:25px;
-}
-
-/* HUD */
-.hud{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.hud-box{
-    background:#151515;
-    border-radius:15px;
-    padding:25px;
-    border-left:4px solid #ff9d00;
-}
-
-.hud-box h3{
-    margin-bottom:10px;
-    color:#ff9d00;
+  text-align:center;
+  color:#888;
+  margin-top:25px;
 }
 
 /* TRAINING */
 .training li{
-    margin:13px 0;
-    color:#ccc;
-}
-
-/* CONTACT */
-.contact{
-    max-width:700px;
-    margin:auto;
-}
-
-input,textarea{
-    width:100%;
-    padding:14px;
-    margin:8px 0;
-    background:#151515;
-    border:1px solid #333;
-    border-radius:8px;
-    color:white;
-}
-
-textarea{
-    min-height:130px;
+  margin:14px 0;
+  color:#ccc;
 }
 
 /* FOOTER */
 footer{
-    background:#050505;
-    text-align:center;
-    padding:30px 20px;
-    color:#888;
+  background:#050505;
+  text-align:center;
+  padding:30px 15px;
+  color:#888;
 }
 
 footer strong{
-    color:#ff9d00;
+  color:#ff9d00;
 }
 
-/* MOBILE */
 @media(max-width:700px){
-    nav ul{
-        display:none;
-    }
+  nav{
+    justify-content:center;
+  }
 
-    nav{
-        justify-content:center;
-    }
+  nav ul{
+    display:none;
+  }
 
-    .hero h1{
-        font-size:45px;
-    }
-
-    section{
-        padding:55px 5%;
-    }
+  section{
+    padding:55px 5%;
+  }
 }
 </style>
 </head>
@@ -297,21 +292,20 @@ footer strong{
 <!-- NAVBAR -->
 <nav>
 
-<div class="logo-box">
+<div class="logo">
 
-<!-- OFFICIAL FREE FIRE LOGO -->
 <img
 src="https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/20229/ebcec94a33d37c7b957e8a795240f732.jpg"
-alt="Free Fire Logo">
+alt="Free Fire">
 
-<div class="logo-text">FF PROZONE</div>
+<span>FF PROZONE</span>
 
 </div>
 
 <ul>
 <li><a href="#home">Home</a></li>
+<li><a href="#register">Register</a></li>
 <li><a href="#settings">Settings</a></li>
-<li><a href="#hud">HUD</a></li>
 <li><a href="#training">Training</a></li>
 </ul>
 
@@ -321,17 +315,89 @@ alt="Free Fire Logo">
 <!-- HERO -->
 <section class="hero" id="home">
 
-<div class="hero-content">
+<div>
 
 <h1>FF <span>PROZONE</span></h1>
 
 <p>
-Free Fire sensitivity, HUD guidance and training setup.
-Build your own comfortable settings and improve your aim.
+Free Fire sensitivity, HUD guidance and aim-training
+website. Create your own profile and save your preferred settings.
 </p>
 
+<a href="#register" class="btn">CREATE PROFILE</a>
+
 <a href="#settings" class="btn">VIEW SETTINGS</a>
-<a href="#training" class="btn">TRAINING</a>
+
+</div>
+
+</section>
+
+
+<!-- REGISTER -->
+<section class="auth-section" id="register">
+
+<div class="title">
+<h2>CREATE <span>PROFILE</span></h2>
+</div>
+
+<div class="auth-box">
+
+<h2>Register</h2>
+
+<form onsubmit="registerUser(event)">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="text"
+id="uid"
+placeholder="Free Fire UID"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Create Website Password"
+required>
+
+<select id="device">
+<option value="">Select Device</option>
+<option>Android</option>
+<option>iPhone</option>
+<option>Tablet</option>
+</select>
+
+<div class="checkbox">
+
+<input type="checkbox" id="terms" required>
+
+<label for="terms">
+I understand this is an independent fan website and
+I will not share my Free Fire account password or OTP.
+</label>
+
+</div>
+
+<button class="btn" type="submit">
+REGISTER
+</button>
+
+</form>
+
+<p class="small">
+⚠️ यह demo registration है। इसमें Free Fire का
+original account password या OTP कभी न डालें।
+</p>
 
 </div>
 
@@ -349,22 +415,22 @@ Build your own comfortable settings and improve your aim.
 
 <div class="card">
 <h3>🎯 Aim Training</h3>
-<p>Practice drag shots, tracking and controlled movement in training mode.</p>
+<p>Practice aim, movement and crosshair control.</p>
 </div>
 
 <div class="card">
 <h3>⚙️ Sensitivity</h3>
-<p>Use these values as a starting point and adjust them according to your device.</p>
+<p>Starter sensitivity values for experimenting with your setup.</p>
 </div>
 
 <div class="card">
-<h3>🎮 HUD Setup</h3>
-<p>Customize button positions according to your comfortable finger movement.</p>
+<h3>🎮 HUD Guide</h3>
+<p>Create a comfortable custom HUD for your own play style.</p>
 </div>
 
 <div class="card">
 <h3>📱 Device Setup</h3>
-<p>Keep graphics and controls balanced for smooth gameplay.</p>
+<p>Choose graphics and controls according to your device.</p>
 </div>
 
 </div>
@@ -373,21 +439,20 @@ Build your own comfortable settings and improve your aim.
 
 
 <!-- SETTINGS -->
-<section class="settings" id="settings">
+<section id="settings">
 
 <div class="title">
 <h2>FREE FIRE <span>SETTINGS</span></h2>
-<p style="color:#999;margin-top:10px;">
-Starter settings — adjust according to your device and play style.
+<p style="color:#888;margin-top:10px;">
+Starter values — adjust them according to your device.
 </p>
 </div>
 
+<div class="setting">
 
-<div class="setting-card">
-
-<div class="setting-head">
-<h3>General</h3>
-<div class="value">95</div>
+<div class="setting-top">
+<strong>General</strong>
+<span class="value">95</span>
 </div>
 
 <div class="bar">
@@ -397,11 +462,11 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 
-<div class="setting-card">
+<div class="setting">
 
-<div class="setting-head">
-<h3>Red Dot</h3>
-<div class="value">90</div>
+<div class="setting-top">
+<strong>Red Dot</strong>
+<span class="value">90</span>
 </div>
 
 <div class="bar">
@@ -411,11 +476,11 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 
-<div class="setting-card">
+<div class="setting">
 
-<div class="setting-head">
-<h3>2X Scope</h3>
-<div class="value">80</div>
+<div class="setting-top">
+<strong>2X Scope</strong>
+<span class="value">80</span>
 </div>
 
 <div class="bar">
@@ -425,11 +490,11 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 
-<div class="setting-card">
+<div class="setting">
 
-<div class="setting-head">
-<h3>4X Scope</h3>
-<div class="value">70</div>
+<div class="setting-top">
+<strong>4X Scope</strong>
+<span class="value">70</span>
 </div>
 
 <div class="bar">
@@ -439,11 +504,11 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 
-<div class="setting-card">
+<div class="setting">
 
-<div class="setting-head">
-<h3>Sniper Scope</h3>
-<div class="value">55</div>
+<div class="setting-top">
+<strong>Sniper Scope</strong>
+<span class="value">55</span>
 </div>
 
 <div class="bar">
@@ -453,11 +518,11 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 
-<div class="setting-card">
+<div class="setting">
 
-<div class="setting-head">
-<h3>Free Look</h3>
-<div class="value">75</div>
+<div class="setting-top">
+<strong>Free Look</strong>
+<span class="value">75</span>
 </div>
 
 <div class="bar">
@@ -467,43 +532,8 @@ Starter settings — adjust according to your device and play style.
 </div>
 
 <p class="note">
-⚠️ No sensitivity value guarantees better performance.
-Find the settings that feel comfortable on your own device.
+⚠️ These are starter values, not guaranteed professional settings.
 </p>
-
-</section>
-
-
-<!-- HUD -->
-<section id="hud">
-
-<div class="title">
-<h2>HUD <span>GUIDE</span></h2>
-</div>
-
-<div class="hud">
-
-<div class="hud-box">
-<h3>🔥 Fire Button</h3>
-<p>Keep the fire button at a comfortable size and position for easy drag movement.</p>
-</div>
-
-<div class="hud-box">
-<h3>🎯 Scope</h3>
-<p>Place the scope button where your finger can reach it quickly without blocking visibility.</p>
-</div>
-
-<div class="hud-box">
-<h3>🏃 Movement</h3>
-<p>Keep the movement controls comfortable so you can change direction smoothly.</p>
-</div>
-
-<div class="hud-box">
-<h3>🔄 Custom HUD</h3>
-<p>Test your HUD in training mode before using it in matches.</p>
-</div>
-
-</div>
 
 </section>
 
@@ -512,58 +542,28 @@ Find the settings that feel comfortable on your own device.
 <section id="training">
 
 <div class="title">
-<h2>7-DAY <span>AIM TRAINING</span></h2>
+<h2>7-DAY <span>TRAINING</span></h2>
 </div>
 
 <div class="card training">
 
 <ul>
 
-<li><strong>Day 1:</strong> Crosshair placement practice</li>
+<li><strong>Day 1:</strong> Crosshair placement</li>
 
 <li><strong>Day 2:</strong> Drag-shot practice</li>
 
-<li><strong>Day 3:</strong> Short-range movement</li>
+<li><strong>Day 3:</strong> Movement practice</li>
 
 <li><strong>Day 4:</strong> Red Dot control</li>
 
-<li><strong>Day 5:</strong> 2X & 4X control</li>
+<li><strong>Day 5:</strong> 2X & 4X practice</li>
 
-<li><strong>Day 6:</strong> Movement + aim combination</li>
+<li><strong>Day 6:</strong> Movement + aim</li>
 
-<li><strong>Day 7:</strong> Full training session + review</li>
+<li><strong>Day 7:</strong> Full training + review</li>
 
 </ul>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section>
-
-<div class="title">
-<h2>CONTACT <span>US</span></h2>
-</div>
-
-<div class="contact">
-
-<form onsubmit="sendWhatsApp();return false;">
-
-<input id="name" type="text" placeholder="Your Name" required>
-
-<input id="uid" type="text" placeholder="Free Fire UID">
-
-<textarea id="message"
-placeholder="Write your message..."
-required></textarea>
-
-<button class="btn" type="submit">
-SEND MESSAGE
-</button>
-
-</form>
 
 </div>
 
@@ -573,12 +573,10 @@ SEND MESSAGE
 <!-- FOOTER -->
 <footer>
 
-<p>
-<strong>FF PROZONE</strong>
-</p>
+<p><strong>FF PROZONE</strong></p>
 
 <p style="margin-top:10px;">
-Fan-made Free Fire settings & training website.
+Independent Free Fire fan website
 </p>
 
 <p style="margin-top:10px;">
@@ -594,32 +592,56 @@ Not affiliated with or endorsed by Garena.
 
 <script>
 
-function sendWhatsApp(){
-
-let name=document.getElementById("name").value;
-
-let uid=document.getElementById("uid").value;
-
-let message=document.getElementById("message").value;
-
 /*
-CHANGE THIS NUMBER TO YOUR OWN WHATSAPP NUMBER
-Example:
-919876543210
+DEMO REGISTRATION
+
+This stores only the demo profile in this browser.
+For a real website, use a proper secure backend.
+Do NOT store real account passwords here.
 */
 
-let phone="91XXXXXXXXXX";
+function registerUser(event){
 
-let text=
-"FF ProZone Contact%0A%0A"+
-"Name: "+name+"%0A"+
-"UID: "+uid+"%0A"+
-"Message: "+message;
+event.preventDefault();
 
-window.open(
-"https://wa.me/"+phone+"?text="+text,
-"_blank"
+let name=document.getElementById("name").value;
+let uid=document.getElementById("uid").value;
+let phone=document.getElementById("phone").value;
+let device=document.getElementById("device").value;
+
+if(!device){
+alert("Please select your device.");
+return;
+}
+
+let profile={
+name:name,
+uid:uid,
+phone:phone,
+device:device
+};
+
+/*
+Only demo profile information is saved.
+The Free Fire account password is NOT collected.
+*/
+
+localStorage.setItem(
+"ffProZoneProfile",
+JSON.stringify(profile)
 );
+
+alert(
+"Registration successful! 🎉\n\n"+
+"Welcome "+name+"!"
+);
+
+document.getElementById("name").value="";
+document.getElementById("uid").value="";
+document.getElementById("phone").value="";
+document.getElementById("password").value="";
+document.getElementById("device").value="";
+document.getElementById("terms").checked=false;
 
 }
 
