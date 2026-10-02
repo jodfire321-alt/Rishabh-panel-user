@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FF ProZone | Free Fire Settings</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080b12;
+    color:#fff;
+    line-height:1.6;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,11,18,.96);
+    border-bottom:1px solid #202735;
+    padding:16px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#ffb000;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb000;
+}
+
+.hero{
+    min-height:88vh;
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    background:
+    radial-gradient(circle at 80% 20%,#3b2600 0%,transparent 30%),
+    linear-gradient(135deg,#080b12,#101722);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    border:1px solid #ffb000;
+    color:#ffb000;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-size:58px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ffb000;
+}
+
+.hero p{
+    color:#aeb6c5;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffb000;
+    color:#111;
+    padding:14px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:900;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#ffc533;
+    transform:translateY(-2px);
+}
+
+.btn.dark{
+    background:#161d29;
+    color:#fff;
+    border:1px solid #374151;
+}
+
+.hero-card{
+    width:340px;
+    padding:35px;
+    border:1px solid #303846;
+    border-radius:22px;
+    background:linear-gradient(145deg,#151c28,#0c1018);
+    box-shadow:0 25px 70px rgba(0,0,0,.5);
+    text-align:center;
+}
+
+.fire{
+    font-size:90px;
+    margin-bottom:15px;
+}
+
+.hero-card h2{
+    color:#ffb000;
+    margin-bottom:10px;
+}
+
+.hero-card p{
+    color:#9ca7b8;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.title p{
+    color:#9ca7b8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#111722;
+    border:1px solid #242c39;
+    border-radius:16px;
+    padding:28px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ffb000;
+}
+
+.icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#ffb000;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#9ca7b8;
+}
+
+.settings{
+    background:#0d121b;
+}
+
+.setting-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.setting{
+    background:#151c28;
+    border:1px solid #293241;
+    border-radius:15px;
+    padding:25px;
+}
+
+.setting h3{
+    color:#ffb000;
+    margin-bottom:15px;
+}
+
+.setting-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #28303c;
+}
+
+.setting-row:last-child{
+    border-bottom:none;
+}
+
+.value{
+    color:#fff;
+    font-weight:bold;
+}
+
+.pro{
+    background:
+    radial-gradient(circle at top right,#382500,transparent 35%),
+    #080b12;
+}
+
+.players{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.player{
+    background:#111722;
+    border:1px solid #293241;
+    border-radius:16px;
+    padding:28px;
+    text-align:center;
+}
+
+.avatar{
+    width:75px;
+    height:75px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ffb000,#ff5e00);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+}
+
+.player h3{
+    margin-bottom:5px;
+}
+
+.player .username{
+    color:#ffb000;
+    font-weight:bold;
+}
+
+.player p{
+    color:#9ca7b8;
+    margin-top:12px;
+    font-size:14px;
+}
+
+.note{
+    max-width:850px;
+    margin:35px auto 0;
+    padding:18px;
+    background:#151c28;
+    border-left:4px solid #ffb000;
+    color:#b9c1cf;
+    border-radius:8px;
+}
+
+.training{
+    background:#0d121b;
+}
+
+.steps{
+    max-width:850px;
+    margin:auto;
+}
+
+.step{
+    display:flex;
+    gap:20px;
+    padding:22px;
+    background:#151c28;
+    border:1px solid #293241;
+    border-radius:13px;
+    margin-bottom:15px;
+}
+
+.step-number{
+    min-width:45px;
+    height:45px;
+    background:#ffb000;
+    color:#111;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:900;
+}
+
+.step h3{
+    margin-bottom:5px;
+}
+
+.step p{
+    color:#9ca7b8;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#111722;
+    border:1px solid #293241;
+    border-radius:18px;
+    padding:35px;
+}
+
+form{
+    display:grid;
+    gap:15px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    background:#0b1018;
+    border:1px solid #303947;
+    color:#fff;
+    border-radius:8px;
+    outline:none;
+}
+
+textarea{
+    min-height:120px;
+}
+
+button{
+    border:none;
+    padding:14px;
+    background:#ffb000;
+    color:#111;
+    border-radius:8px;
+    font-weight:900;
+    cursor:pointer;
+    font-size:16px;
+}
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    background:#05070b;
+    border-top:1px solid #202735;
+}
+
+footer h3{
+    color:#ffb000;
+}
+
+footer p{
+    color:#7f8999;
+    margin-top:7px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:27px;
+    z-index:999;
+}
+
+@media(max-width:800px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-card{
+        width:100%;
+        max-width:350px;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .cards,
+    .players,
+    .setting-grid{
+        grid-template-columns:1fr;
+    }
+
+    .title h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        FF<span>ProZone</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#players">Players</a></li>
+        <li><a href="#training">Training</a></li>
+    </ul>
+
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <div class="badge">
+            FREE FIRE SETTINGS HUB
+        </div>
+
+        <h1>
+            Play Smarter.<br>
+            <span>Aim Better.</span>
+        </h1>
+
+        <p>
+            Discover practical Free Fire sensitivity,
+            HUD guidance, aim training and competitive
+            gameplay tips in one clean platform.
+        </p>
+
+        <a href="#settings" class="btn">
+            Explore Settings
+        </a>
+
+        <a href="#training" class="btn dark">
+            Start Training
+        </a>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="fire">🔥</div>
+
+        <h2>PRO GAMING HUB</h2>
+
+        <p>
+            Legitimate settings and training resources
+            for Free Fire players.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="features">
+
+    <div class="title">
+
+        <h2>Everything You Need</h2>
+
+        <p>
+            Improve your gameplay without unauthorized tools.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Aim Training</h3>
+            <p>
+                Improve crosshair placement, reaction
+                time and drag-control through practice.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Sensitivity</h3>
+            <p>
+                Understand sensitivity categories and
+                adjust them according to your device.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎮</div>
+            <h3>HUD Guidance</h3>
+            <p>
+                Build a comfortable HUD layout and
+                improve your control during matches.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Device Setup</h3>
+            <p>
+                Learn practical display, performance
+                and control settings.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Competitive Tips</h3>
+            <p>
+                Learn positioning, movement and
+                team-play fundamentals.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>Improve Skills</h3>
+            <p>
+                Track your practice and gradually
+                improve your gameplay.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="settings" id="settings">
+
+    <div class="title">
+
+        <h2>Starter Sensitivity Guide</h2>
+
+        <p>
+            Use these as starting points and customize
+            them for your own device and playstyle.
+        </p>
+
+    </div>
+
+
+    <div class="setting-grid">
+
+        <div class="setting">
+
+            <h3>🎯 General</h3>
+
+            <div class="setting-row">
+                <span>Starting Range</span>
+                <span class="value">80–100</span>
+            </div>
+
+            <div class="setting-row">
+                <span>Purpose</span>
+                <span class="value">Camera / Aim</span>
+            </div>
+
+        </div>
+
+
+        <div class="setting">
+
+            <h3>🔴 Red Dot</h3>
+
+            <div class="setting-row">
+                <span>Starting Range</span>
+                <span class="value">75–95</span>
+            </div>
+
+            <div class="setting-row">
+                <span>Purpose</span>
+                <span class="value">Close Combat</span>
+            </div>
+
+        </div>
+
+
+        <div class="setting">
+
+            <h3>🔭 2X Scope</h3>
+
+            <div class="setting-row">
+                <span>Starting Range</span>
+                <span class="value">65–85</span>
+            </div>
+
+            <div class="setting-row">
+                <span>Purpose</span>
+                <span class="value">Medium Range</span>
+            </div>
+
+        </div>
+
+
+        <div class="setting">
+
+            <h3>🔭 4X Scope</h3>
+
+            <div class="setting-row">
+                <span>Starting Range</span>
+                <span class="value">55–75</span>
+            </div>
+
+            <div class="setting-row">
+                <span>Purpose</span>
+                <span class="value">Long Range</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="note">
+
+        <b>Important:</b>
+        These are only starter values, not guaranteed
+        “pro settings”. Sensitivity depends on device,
+        FPS, screen size and personal control style.
+
+    </div>
+
+</section>
+
+
+<section class="pro" id="players">
+
+    <div class="title">
+
+        <h2>Pro Player Inspiration</h2>
+
+        <p>
+            Follow competitive players and use their
+            settings only as inspiration.
+        </p>
+
+    </div>
+
+
+    <div class="players">
+
+        <div class="player">
+
+            <div class="avatar">🏆</div>
+
+            <h3>Competitive Player</h3>
+
+            <div class="username">
+                PRO PROFILE
+            </div>
+
+            <p>
+                Check the player's current official
+                HUD/sensitivity preset when available.
+            </p>
+
+        </div>
+
+
+        <div class="player">
+
+            <div class="avatar">🔥</div>
+
+            <h3>Esports Player</h3>
+
+            <div class="username">
+                ESPORTS PROFILE
+            </div>
+
+            <p>
+                Competitive settings can change with
+                patches and personal preference.
+            </p>
+
+        </div>
+
+
+        <div class="player">
+
+            <div class="avatar">⚡</div>
+
+            <h3>Pro Inspiration</h3>
+
+            <div class="username">
+                SETTINGS GUIDE
+            </div>
+
+            <p>
+                Use official in-game recommendations
+                instead of copying unverified settings.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="note">
+
+        Garena's newer Free Fire updates include a
+        HUD Recommendation System where players can
+        browse presets shared by top players and apply
+        HUD/sensitivity recommendations.
+
+    </div>
+
+</section>
+
+
+<section class="training" id="training">
+
+    <div class="title">
+
+        <h2>7-Day Aim Training</h2>
+
+        <p>
+            Build skill through consistent practice.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">1</div>
+
+            <div>
+                <h3>Warm Up</h3>
+                <p>
+                    Spend a few minutes practicing
+                    basic movement and crosshair control.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">2</div>
+
+            <div>
+                <h3>Crosshair Practice</h3>
+                <p>
+                    Keep your crosshair around likely
+                    enemy positions.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">3</div>
+
+            <div>
+                <h3>Drag Practice</h3>
+                <p>
+                    Practice controlled upward movement
+                    in the training area.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">4</div>
+
+            <div>
+                <h3>Movement</h3>
+                <p>
+                    Practice strafing, crouching and
+                    changing direction smoothly.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">5</div>
+
+            <div>
+                <h3>Short Matches</h3>
+                <p>
+                    Apply your settings in normal matches
+                    and observe what feels comfortable.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">6</div>
+
+            <div>
+                <h3>Review</h3>
+                <p>
+                    Identify mistakes and adjust only
+                    one setting at a time.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">7</div>
+
+            <div>
+                <h3>Repeat</h3>
+                <p>
+                    Repeat the routine consistently
+                    instead of changing settings constantly.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="title">
+
+        <h2>Join FF ProZone</h2>
+
+        <p>
+            Register your interest for the settings guide.
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <form id="form">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="uid"
+                placeholder="Free Fire UID (optional)"
+            >
+
+            <select id="device">
+
+                <option value="">
+                    Select Device
+                </option>
+
+                <option>Android</option>
+                <option>iPhone</option>
+                <option>Tablet</option>
+
+            </select>
+
+            <textarea
+                id="message"
+                placeholder="What settings do you need?"
+            ></textarea>
+
+            <button type="submit">
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>FF ProZone</h3>
+
+    <p>
+        Free Fire Settings • HUD • Training • Tips
+    </p>
+
+    <p>
+        This is an independent fan-made website and
+        is not affiliated with Garena.
+    </p>
+
+    <p>
+        © 2026 FF ProZone
+    </p>
+
+</footer>
+
+
+<a
+    class="whatsapp"
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+>
+    ☎
+</a>
+
+
+<script>
+
+document
+.getElementById("form")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const uid =
+        document.getElementById("uid").value;
+
+    const device =
+        document.getElementById("device").value;
+
+    const message =
+        document.getElementById("message").value;
+
+    const whatsappNumber =
+        "91XXXXXXXXXX";
+
+    const text =
+        "Hello FF ProZone,%0A%0A" +
+        "Name: " + name + "%0A" +
+        "UID: " + uid + "%0A" +
+        "Device: " + device + "%0A" +
+        "Request: " + message;
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        text,
+        "_blank"
+    );
+
+});
+
+</script>
+
+</body>
+  </html>
